@@ -2080,8 +2080,8 @@ ZI = expr:(&cmavo ( z u / z a / z i ) &post_word) {return _node("ZI", expr);}
 
 ZIhE = expr:(&cmavo ( z i h e ) &post_word) {return _node("ZIhE", expr);}
 
-//// EXP-ADD: ma'oi
-ZO = expr:(&cmavo ( z o / m a h o i ) &post_word) {return _node("ZO", expr);}
+//// EXP-ADD: ma'oi, ra'oi, ma'oi'e, doi'u
+ZO = expr:(&cmavo ( z o / m a h o i / r a h o i / m a h o i h e / d o i h u ) &post_word) {return _node("ZO", expr);}
 
 ZOI = expr:(&cmavo ( z o i / l a h o ) &post_word) {return _node("ZOI", expr);}
 
