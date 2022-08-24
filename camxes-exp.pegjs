@@ -1915,7 +1915,8 @@ JOhI = expr:(&cmavo ( j o h i ) &post_word) {return _node("JOhI", expr);}
 
 JOI = expr:(&cmavo ( f a h u / p i h u / j o i / c e h o / c e / j o h u / k u h a / j o h e / j u h e ) &post_word) {return _node("JOI", expr);}
 
-KE = expr:(&cmavo ( k e ) &post_word) {return _node("KE", expr);}
+//// EXP-ADD: fei'u, ke'oi, pi'ai, va'au
+KE = expr:(&cmavo ( k e / f e i h u / k e h o i / p i h a i / v a h a u ) &post_word) {return _node("KE", expr);}
 
 KEhE = expr:(&cmavo ( k e h e ) &post_word) {return _node("KEhE", expr);}
 

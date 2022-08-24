@@ -1727,7 +1727,8 @@ JOhI <- &cmavo ( j o h i ) &post_word
 
 JOI <- &cmavo ( f a h u / p i h u / j o i / c e h o / c e / j o h u / k u h a / j o h e / j u h e ) &post_word
 
-KE <- &cmavo ( k e ) &post_word
+#// EXP-ADD: fei'u, ke'oi, pi'ai, va'au
+KE <- &cmavo ( k e / f e i h u / k e h o i / p i h a i / v a h a u ) &post_word
 
 KEhE <- &cmavo ( k e h e ) &post_word
 
