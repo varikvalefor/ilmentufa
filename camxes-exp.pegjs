@@ -2072,7 +2072,8 @@ Y = expr:(&cmavo ( y+ ) &post_word) {return _node("Y", expr);}
 //// EXP-ADD: xa'o
 ZAhO = expr:(&cmavo ( s a u h a / c o h a h a / c o h a u h a / x o h u / c o h u h a / c o h i / p u h o / c o h u / m o h u / c a h o / c o h a / d e h a / b a h o / d i h a / z a h o / x a h o ) &post_word) {return _node("ZAhO", expr);}
 
-ZEhA = expr:(&cmavo ( z e h u / z e h a / z e h i / z e h e ) &post_word) {return _node("ZEhA", expr);}
+//// EXP-ADD: zei'au, baze'e, ze'aba, ze'aca, ze'apu
+ZEhA = expr:(&cmavo ( z e h u / z e h a / z e h i / z e h e / z e i h a u / b a z e h e / z e h a b a / z e h a c a / z e h a p u ) &post_word) {return _node("ZEhA", expr);}
 
 ZEI = expr:(&cmavo ( z e i ) &post_word) {return _node("ZEI", expr);}
 
