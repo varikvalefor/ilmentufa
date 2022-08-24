@@ -1950,7 +1950,8 @@ LEhAI = expr:(&cmavo ( l e h a i ) &post_word) {return _node("LEhAI", expr);}
 
 LEhU = expr:(&cmavo ( l e h u ) &post_word) {return _node("LEhU", expr);}
 
-LI = expr:(&cmavo ( m e h o / l i ) &post_word) {return _node("LI", expr);}
+//// EXP-ADD: li'ai, na'au, bo'ai, mai'o
+LI = expr:(&cmavo ( m e h o / l i / l i h a i / n a h a u / b o h a i / m a i h o ) &post_word) {return _node("LI", expr);}
 
 LIhU = expr:(&cmavo ( l i h u ) &post_word) {return _node("LIhU", expr);}
 

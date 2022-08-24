@@ -1762,7 +1762,8 @@ LEhAI <- &cmavo ( l e h a i ) &post_word
 
 LEhU <- &cmavo ( l e h u ) &post_word
 
-LI <- &cmavo ( m e h o / l i ) &post_word
+#// EXP-ADD: li'ai, na'au, bo'ai, mai'o
+LI <- &cmavo ( m e h o / l i / l i h a i / n a h a u / b o h a i / m a i h o ) &post_word
 
 LIhU <- &cmavo ( l i h u ) &post_word
 
