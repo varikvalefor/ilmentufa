@@ -1881,7 +1881,8 @@ VUhO <- &cmavo ( v u h o ) &post_word
 #// EXP-ADD: fau'e, te'ai, xi'e, xi'i
 XI <- &cmavo ( x i / f a u h e / t e h a i / x i h e / x i h i ) &post_word
 
-Y <- &cmavo ( y+ ) &post_word
+#// EXP-ADD: ie'o, ko'o'o'o'o
+Y <- &cmavo ( y+ / i e h o / k o h o h o h o h o ) &post_word
 
 #// EXP-ADD: xa'o
 ZAhO <- &cmavo ( s a u h a / c o h a h a / c o h a u h a / x o h u / c o h u h a / c o h i / p u h o / c o h u / m o h u / c a h o / c o h a / d e h a / b a h o / d i h a / z a h o / x a h o ) &post_word

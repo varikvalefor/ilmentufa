@@ -2069,7 +2069,8 @@ VUhO = expr:(&cmavo ( v u h o ) &post_word) {return _node("VUhO", expr);}
 //// EXP-ADD: fau'e, te'ai, xi'e, xi'i
 XI = expr:(&cmavo ( x i / f a u h e / t e h a i / x i h e / x i h i ) &post_word) {return _node("XI", expr);}
 
-Y = expr:(&cmavo ( y+ ) &post_word) {return _node("Y", expr);}
+//// EXP-ADD: ie'o, ko'o'o'o'o
+Y = expr:(&cmavo ( y+ / i e h o / k o h o h o h o h o ) &post_word) {return _node("Y", expr);}
 
 //// EXP-ADD: xa'o
 ZAhO = expr:(&cmavo ( s a u h a / c o h a h a / c o h a u h a / x o h u / c o h u h a / c o h i / p u h o / c o h u / m o h u / c a h o / c o h a / d e h a / b a h o / d i h a / z a h o / x a h o ) &post_word) {return _node("ZAhO", expr);}
