@@ -171,8 +171,8 @@ gek_termset <- gek terms_gik_terms
 
 terms_gik_terms <- term (gik / terms_gik_terms) term
 
-#// EXP-MODIF: '?' added after "relative_clauses" + Lunra's add of "(joik_ek sumti)?"
-sumti <- sumti_1 (VUhO_clause free* (relative_clauses (joik_ek sumti)?)?)?
+#// EXP-MODIF: "(VUhOI spaces)?" + '?' added after "relative_clauses" + Lunra's add of "(joik_ek sumti)?"
+sumti <- (VUhOI spaces)? sumti_1 (VUhO_clause free* (relative_clauses (joik_ek sumti)?)?)?
 
 sumti_1 <- sumti_2 (joik_ek stag? KE_clause free* sumti KEhE_elidible free*)?
 
@@ -1317,7 +1317,7 @@ BRIVLA <- gismu / lujvo / fuhivla / CMEVLA
 # gismu_2 = expr:(gismu) {return ["gismu", expr];}
 #// EXP-DEL: LA, for brivla/cmevla merge
 # EXP-MODIF: attempt to formalize lo'ai..sa'ai..le'ai replacement expressions
-CMAVO <- A / BAI / BAhE / BE / BEI / BEhO / BIhE / BIhI / BO / BOI / BU / BY / CAhA / CAI / CEI / CEhE / CO / COI / CU / CUhE / DAhO / DOI / DOhU / FA / FAhA / FAhO / FEhE / FEhU / FIhO / FOI / FUhA / FUhE / FUhO / GA / GAhO / GEhU / GI / GIhA / GOI / GOhA / GUhA / I / JA / JAI / JOhI / JOI / KE / KEhE / KEI / KI / KOhA / KU / KUhE / KUhO / LAU / LAhE / LE / LEhAI / LEhU / LI / LIhU / LOhAI / LOhO / LOhU / LU / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOhI / MOI / NA / NAI / NAhE / NAhU / NIhE / NIhO / NOI / NU / NUhA / NUhI / NUhU / PA / PEhE / PEhO / PU / RAhO / ROI / SA / SE / SEI / SEhU / SI / SOI / SU / TAhE / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VA / VAU / VEI / VEhO / VUhU / VEhA / VIhA / VUhO / XI / ZAhO / ZEhA / ZEI / ZI / ZIhE / ZO / ZOI / ZOhU / cmavo
+CMAVO <- A / BAI / BAhE / BE / BEI / BEhO / BIhE / BIhI / BO / BOI / BU / BY / CAhA / CAI / CEI / CEhE / CO / COI / CU / CUhE / DAhO / DOI / DOhU / FA / FAhA / FAhO / FEhE / FEhU / FIhO / FOI / FUhA / FUhE / FUhO / GA / GAhO / GEhU / GI / GIhA / GOI / GOhA / GUhA / I / JA / JAI / JOhI / JOI / KE / KEhE / KEI / KI / KOhA / KU / KUhE / KUhO / LAU / LAhE / LE / LEhAI / LEhU / LI / LIhU / LOhAI / LOhO / LOhU / LU / LUhU / MAhO / MAI / ME / MEhU / MOhE / MOhI / MOI / NA / NAI / NAhE / NAhU / NIhE / NIhO / NOI / NU / NUhA / NUhI / NUhU / PA / PEhE / PEhO / PU / RAhO / ROI / SA / SE / SEI / SEhU / SI / SOI / SU / TAhE / TEhU / TEI / TO / TOI / TUhE / TUhU / UI / VA / VAU / VEI / VEhO / VUhU / VEhA / VIhA / VUhO / VUhOI / XI / ZAhO / ZEhA / ZEI / ZI / ZIhE / ZO / ZOI / ZOhU / cmavo
 
 # This is a Parsing Expression Grammar for the morphology of Lojban.
 # See http://www.pdos.lcs.mit.edu/~baford/packrat/
@@ -1908,3 +1908,4 @@ NOhOI <- &cmavo ( n o h o i / p o h o i ) &post_word
 KUhOI <- &cmavo ( k u h o i ) &post_word
 LOhOI <- &cmavo ( l o h o i ) &post_word
 KUhAU <- &cmavo ( k u h a u ) &post_word
+VUhOI <- &cmavo ( v u h o i ) &post_word
