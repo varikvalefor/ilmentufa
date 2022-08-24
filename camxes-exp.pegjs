@@ -1862,7 +1862,8 @@ CU = expr:(&cmavo ( c u ) &post_word) {return _node("CU", expr);}
 
 CUhE = expr:(&cmavo ( c u h e / n a u ) &post_word) {return _node("CUhE", expr);}
 
-DAhO = expr:(&cmavo ( d a h o ) &post_word) {return _node("DAhO", expr);}
+//// EXP-ADD: dai'o, do'ai, xei'a, xei'i, xei'u
+DAhO = expr:(&cmavo ( d a i h o / d a h o / d o h a i / x e i h a / x e i h i / x e i h u ) &post_word) {return _node("DAhO", expr);}
 
 //// EXP-ADD: da'oi
 DOI = expr:(&cmavo ( d o i / d a h o i ) &post_word) {return _node("DOI", expr);}

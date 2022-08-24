@@ -1674,7 +1674,8 @@ CU <- &cmavo ( c u ) &post_word
 
 CUhE <- &cmavo ( c u h e / n a u ) &post_word
 
-DAhO <- &cmavo ( d a h o ) &post_word
+#// EXP-ADD: dai'o, do'ai, xei'a, xei'i, xei'u
+DAhO <- &cmavo ( d a i h o / d a h o / d o h a i / x e i h a / x e i h i / x e i h u ) &post_word
 
 #// EXP-ADD: da'oi
 DOI <- &cmavo ( d o i / d a h o i ) &post_word
