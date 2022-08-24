@@ -2065,7 +2065,8 @@ VIhA = expr:(&cmavo ( v i h i / v i h a / v i h u / v i h e ) &post_word) {retur
 
 VUhO = expr:(&cmavo ( v u h o ) &post_word) {return _node("VUhO", expr);}
 
-XI = expr:(&cmavo ( x i ) &post_word) {return _node("XI", expr);}
+//// EXP-ADD: fau'e, te'ai, xi'e, xi'i
+XI = expr:(&cmavo ( x i / f a u h e / t e h a i / x i h e / x i h i ) &post_word) {return _node("XI", expr);}
 
 Y = expr:(&cmavo ( y+ ) &post_word) {return _node("Y", expr);}
 

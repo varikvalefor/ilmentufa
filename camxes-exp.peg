@@ -1877,7 +1877,8 @@ VIhA <- &cmavo ( v i h i / v i h a / v i h u / v i h e ) &post_word
 
 VUhO <- &cmavo ( v u h o ) &post_word
 
-XI <- &cmavo ( x i ) &post_word
+#// EXP-ADD: fau'e, te'ai, xi'e, xi'i
+XI <- &cmavo ( x i / f a u h e / t e h a i / x i h e / x i h i ) &post_word
 
 Y <- &cmavo ( y+ ) &post_word
 
