@@ -1722,7 +1722,8 @@ I <- &cmavo ( i ) &post_word
 
 JA <- &cmavo ( j e h i / j e / j o / j a / j u ) &post_word
 
-JAI <- &cmavo ( j a i ) &post_word
+#// EXP-ADD: ja'ei, jai'e, jo'ai
+JAI <- &cmavo ( j a i / j a h e i / j a i h e / j o h a i ) &post_word
 
 JOhI <- &cmavo ( j o h i ) &post_word
 

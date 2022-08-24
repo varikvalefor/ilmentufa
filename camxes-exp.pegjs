@@ -1910,7 +1910,8 @@ I = expr:(&cmavo ( i ) &post_word) {return _node("I", expr);}
 
 JA = expr:(&cmavo ( j e h i / j e / j o / j a / j u ) &post_word) {return _node("JA", expr);}
 
-JAI = expr:(&cmavo ( j a i ) &post_word) {return _node("JAI", expr);}
+//// EXP-ADD: ja'ei, jai'e, jo'ai
+JAI = expr:(&cmavo ( j a i / j a h e i / j a i h e / j o h a i ) &post_word) {return _node("JAI", expr);}
 
 JOhI = expr:(&cmavo ( j o h i ) &post_word) {return _node("JOhI", expr);}
 
