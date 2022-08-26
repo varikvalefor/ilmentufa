@@ -245,7 +245,7 @@ tanru_unit_1 <- tanru_unit_2 linkargs? / linkargs? tanru_unit_2
 
 # ** zei is part of BRIVLA_clause
 #// EXP-MODIF: brivla / cmevla merge + add of MEhOI_clause + add of "linkargs tanru_unit_1 / " (for {jai be broda}) + MEX simplification
-tanru_unit_2 <- BRIVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_clause free* selbri_3 KEhE_elidible free* / ME_clause free* (sumti / mex) MEhU_elidible free* MOI_clause? free* / mex MOI_clause free* / NUhA_clause free* operator / SE_clause free* tanru_unit_2 / JAI_clause free* tag? tanru_unit_2 / NAhE_clause free* tanru_unit_2 / NU_clause free* (joik_jek NU_clause free*)* subsentence KEI_elidible free* / linkargs tanru_unit_1 / MEhOI_clause free*
+tanru_unit_2 <- BRIVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_clause free* selbri_3 KEhE_elidible free* / ME_clause free* (sumti / mex) MEhU_elidible free* MOI_clause? free* / mex MOI_clause free* / NUhA_clause free* operator / SE_clause free* tanru_unit_2 / JAI_clause free* tag? tanru_unit_2 / NAhE_clause free* tanru_unit_2 / NU_clause free* (joik_jek NU_clause free*)* subsentence KEI_elidible free* / linkargs tanru_unit_1 / MEhOI_clause / MUhOI_clause free*
 
 #; linkargs = BE_clause free* term links? BEhO_clause? free*
 
@@ -1309,6 +1309,10 @@ gu_post <- post_clause
 gu_word <- &cmavo ( g u ) &post_word
 
 
+MUhOI_clause <- MUhOI_pre MUhOI_post
+MUhOI_pre <- pre_clause MUhOI spaces? zoi_open spaces? (zoi_word spaces)* zoi_close spaces?
+MUhOI_post <- post_clause
+MUhOI_start <- !MUhOI_pre MUhOI
 # ___ MORPHOLOGY ___
 
 CMEVLA <- cmevla
@@ -1916,3 +1920,4 @@ KUhOI <- &cmavo ( k u h o i ) &post_word
 LOhOI <- &cmavo ( l o h o i ) &post_word
 KUhAU <- &cmavo ( k u h a u ) &post_word
 VUhOI <- &cmavo ( v u h o i ) &post_word
+MUhOI <- &cmavo ( m u h o i ) &post_word

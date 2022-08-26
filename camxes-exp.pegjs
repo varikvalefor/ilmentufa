@@ -433,7 +433,7 @@ tanru_unit_1 = expr:(tanru_unit_2 linkargs? / linkargs? tanru_unit_2) {return _n
 
 // ** zei is part of BRIVLA_clause
 //// EXP-MODIF: brivla / cmevla merge + add of MEhOI_clause + add of "linkargs tanru_unit_1 / " (for {jai be broda}) + MEX simplification
-tanru_unit_2 = expr:(BRIVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_clause free* selbri_3 KEhE_elidible free* / ME_clause free* (sumti / mex) MEhU_elidible free* MOI_clause? free* / mex MOI_clause free* / NUhA_clause free* operator / SE_clause free* tanru_unit_2 / JAI_clause free* tag? tanru_unit_2 / NAhE_clause free* tanru_unit_2 / NU_clause free* (joik_jek NU_clause free*)* subsentence KEI_elidible free* / linkargs tanru_unit_1 / MEhOI_clause free*) {return _node("tanru_unit_2", expr);}
+tanru_unit_2 = expr:(BRIVLA_clause free* / GOhA_clause RAhO_clause? free* / KE_clause free* selbri_3 KEhE_elidible free* / ME_clause free* (sumti / mex) MEhU_elidible free* MOI_clause? free* / mex MOI_clause free* / NUhA_clause free* operator / SE_clause free* tanru_unit_2 / JAI_clause free* tag? tanru_unit_2 / NAhE_clause free* tanru_unit_2 / NU_clause free* (joik_jek NU_clause free*)* subsentence KEI_elidible free* / linkargs tanru_unit_1 / MEhOI_clause / MUhOI_clause free*) {return _node("tanru_unit_2", expr);}
 
 //; linkargs = BE_clause free* term links? BEhO_clause? free*
 
@@ -1497,6 +1497,10 @@ gu_post = expr:(post_clause) {return _node("gu_post", expr);}
 gu_word = expr:(&cmavo ( g u ) &post_word) {return _node("gu_word", expr);}
 
 
+MUhOI_clause = expr:(MUhOI_pre MUhOI_post) {return _node("MUhOI_clause", expr);}
+MUhOI_pre = expr:(pre_clause MUhOI spaces? zoi_open spaces? (zoi_word spaces)* zoi_close spaces?) {return _node("MUhOI_pre", expr);}
+MUhOI_post = expr:(post_clause) {return _node("MUhOI_post", expr);}
+MUhOI_start = expr:(!MUhOI_pre MUhOI) {return _node("MUhOI_start", expr);}
 // ___ MORPHOLOGY ___
 
 CMEVLA = expr:(cmevla) {return _node("CMEVLA", expr);}
@@ -2104,3 +2108,4 @@ KUhOI = expr:(&cmavo ( k u h o i ) &post_word) {return _node("KUhOI", expr);}
 LOhOI = expr:(&cmavo ( l o h o i ) &post_word) {return _node("LOhOI", expr);}
 KUhAU = expr:(&cmavo ( k u h a u ) &post_word) {return _node("KUhAU", expr);}
 VUhOI = expr:(&cmavo ( v u h o i ) &post_word) {return _node("VUhOI", expr);}
+MUhOI = expr:(&cmavo ( m u h o i ) &post_word) {return _node("MUhOI", expr);}
