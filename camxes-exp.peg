@@ -172,7 +172,7 @@ gek_termset <- gek terms_gik_terms
 terms_gik_terms <- term (gik / terms_gik_terms) term
 
 #// EXP-MODIF: "(VUhOI spaces)?" + '?' added after "relative_clauses" + Lunra's add of "(joik_ek sumti)?"
-sumti <- (VUhOI spaces)? sumti_1 (VUhO_clause free* (relative_clauses (joik_ek sumti)?)?)?
+sumti <- VUhOI_elidible sumti_1 (VUhO_clause free* (relative_clauses (joik_ek sumti)?)?)?
 
 sumti_1 <- sumti_2 (joik_ek stag? KE_clause free* sumti KEhE_elidible free*)?
 
@@ -476,6 +476,7 @@ TOI_elidible <- TOI_clause?
 TUhU_elidible <- TUhU_clause?
 VAU_elidible <- VAU_clause?
 VEhO_elidible <- VEhO_clause?
+VUhOI_elidible <- VUhOI_clause?
 
 KUhOI_elidible <- KUhOI_clause?
 KUhAU_elidible <- KUhAU_clause?
@@ -1206,6 +1207,11 @@ VUhO_clause <- VUhO_pre VUhO_post
 VUhO_pre <- pre_clause VUhO spaces?
 VUhO_post <- post_clause
 # VUhO_no_SA_handling = pre_clause VUhO post_clause
+
+VUhOI_clause <- VUhOI_pre VUhOI_post
+VUhOI_pre <- pre_clause VUhOI spaces?
+VUhOI_post <- post_clause
+# VUhOI_no_SA_handling = pre_clause VUhOI post_clause
 
 # glue between logically connected sumti and relative clauses
 

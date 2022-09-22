@@ -360,7 +360,7 @@ gek_termset = expr:(gek terms_gik_terms) {return _node("gek_termset", expr);}
 terms_gik_terms = expr:(term (gik / terms_gik_terms) term) {return _node("terms_gik_terms", expr);}
 
 //// EXP-MODIF: "(VUhOI spaces)?" + '?' added after "relative_clauses" + Lunra's add of "(joik_ek sumti)?"
-sumti = expr:((VUhOI spaces)? sumti_1 (VUhO_clause free* (relative_clauses (joik_ek sumti)?)?)?) {return _node("sumti", expr);}
+sumti = expr:(VUhOI_elidible sumti_1 (VUhO_clause free* (relative_clauses (joik_ek sumti)?)?)?) {return _node("sumti", expr);}
 
 sumti_1 = expr:(sumti_2 (joik_ek stag? KE_clause free* sumti KEhE_elidible free*)?) {return _node("sumti_1", expr);}
 
@@ -664,6 +664,7 @@ TOI_elidible = expr:(TOI_clause?) {return (expr === "" || !expr) ? ["TOI"] : _no
 TUhU_elidible = expr:(TUhU_clause?) {return (expr === "" || !expr) ? ["TUhU"] : _node_empty("TUhU_elidible", expr);}
 VAU_elidible = expr:(VAU_clause?) {return (expr === "" || !expr) ? ["VAU"] : _node_empty("VAU_elidible", expr);}
 VEhO_elidible = expr:(VEhO_clause?) {return (expr === "" || !expr) ? ["VEhO"] : _node_empty("VEhO_elidible", expr);}
+VUhOI_elidible = expr:(VUhOI_clause?) {return (expr === "" || !expr) ? ["VUhOI"] : _node_empty("VUhOI_elidible", expr);}
 
 KUhOI_elidible = expr:(KUhOI_clause?) {return (expr === "" || !expr) ? ["KUhOI"] : _node_empty("KUhOI_elidible", expr);}
 KUhAU_elidible = expr:(KUhAU_clause?) {return (expr === "" || !expr) ? ["KUhAU"] : _node_empty("KUhAU_elidible", expr);}
@@ -1394,6 +1395,11 @@ VUhO_clause = expr:(VUhO_pre VUhO_post) {return _node("VUhO_clause", expr);}
 VUhO_pre = expr:(pre_clause VUhO spaces?) {return _node("VUhO_pre", expr);}
 VUhO_post = expr:(post_clause) {return _node("VUhO_post", expr);}
 // VUhO_no_SA_handling = pre_clause VUhO post_clause
+
+VUhOI_clause = expr:(VUhOI_pre VUhOI_post) {return _node("VUhOI_clause", expr);}
+VUhOI_pre = expr:(pre_clause VUhOI spaces?) {return _node("VUhOI_pre", expr);}
+VUhOI_post = expr:(post_clause) {return _node("VUhOI_post", expr);}
+// VUhOI_no_SA_handling = pre_clause VUhOI post_clause
 
 // glue between logically connected sumti and relative clauses
 
