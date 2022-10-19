@@ -1973,7 +1973,7 @@ LOhO = expr:(&cmavo ( l o h o ) &post_word) {return _node("LOhO", expr);}
 
 LOhU = expr:(&cmavo ( l o h u ) &post_word) {return _node("LOhU", expr);}
 
-LU = expr:(&cmavo ( l u ) &post_word) {return _node("LU", expr);}
+LU = expr:(&cmavo ( l u / l a h a u / t u h a i ) &post_word) {return _node("LU", expr);}
 
 LUhU = expr:(&cmavo ( l u h u ) &post_word) {return _node("LUhU", expr);}
 

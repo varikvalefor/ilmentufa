@@ -1785,7 +1785,7 @@ LOhO <- &cmavo ( l o h o ) &post_word
 
 LOhU <- &cmavo ( l o h u ) &post_word
 
-LU <- &cmavo ( l u ) &post_word
+LU <- &cmavo ( l u / l a h a u / t u h a i ) &post_word
 
 LUhU <- &cmavo ( l u h u ) &post_word
 
