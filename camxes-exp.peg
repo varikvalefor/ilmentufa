@@ -171,7 +171,7 @@ gek_termset <- gek terms_gik_terms
 
 terms_gik_terms <- term (gik / terms_gik_terms) term
 
-#// EXP-MODIF: "(VUhOI spaces)?" + '?' added after "relative_clauses" + Lunra's add of "(joik_ek sumti)?"
+#// EXP-MODIF: "VUhOI_elidible" + '?' added after "relative_clauses" + Lunra's add of "(joik_ek sumti)?"
 sumti <- VUhOI_elidible sumti_1 (VUhO_clause free* (relative_clauses (joik_ek sumti)?)?)?
 
 sumti_1 <- sumti_2 (joik_ek stag? KE_clause free* sumti KEhE_elidible free*)?
