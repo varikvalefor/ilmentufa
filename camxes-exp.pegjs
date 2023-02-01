@@ -359,7 +359,7 @@ gek_termset = expr:(gek terms_gik_terms) {return _node("gek_termset", expr);}
 
 terms_gik_terms = expr:(term (gik / terms_gik_terms) term) {return _node("terms_gik_terms", expr);}
 
-//// EXP-MODIF: "(VUhOI spaces)?" + '?' added after "relative_clauses" + Lunra's add of "(joik_ek sumti)?"
+//// EXP-MODIF: "VUhOI_elidible" + '?' added after "relative_clauses" + Lunra's add of "(joik_ek sumti)?"
 sumti = expr:(VUhOI_elidible sumti_1 (VUhO_clause free* (relative_clauses (joik_ek sumti)?)?)?) {return _node("sumti", expr);}
 
 sumti_1 = expr:(sumti_2 (joik_ek stag? KE_clause free* sumti KEhE_elidible free*)?) {return _node("sumti_1", expr);}
@@ -529,7 +529,7 @@ gihek_1 = expr:(NA_clause? SE_clause? (JA_clause / JOI_clause / GIhA_clause / GI
 
 gihek_sa = expr:(gihek_1 (!gihek_1 (sa_word / SA_clause !gihek_1 ) )* SA_clause &gihek) {return _node("gihek_sa", expr);}
 
-jek = expr:(NA_clause? SE_clause? JA_clause NAI_clause?) {return _node("jek", expr);}
+jek = expr:(NA_clause? SE_clause? (JA_clause / JIhOI_clause) NAI_clause?) {return _node("jek", expr);}
 
 //// EXP-MODIF: A-JA-JOI merge
 joik = expr:(NA_clause? SE_clause? (JOI_clause / JA_clause / A_clause) NAI_clause? / interval / GAhO_clause interval GAhO_clause) {return _node("joik", expr);}
@@ -963,6 +963,10 @@ I_post = expr:(post_clause) {return _node("I_post", expr);}
 JA_clause = expr:(JA_pre JA_post) {return _node("JA_clause", expr);}
 JA_pre = expr:(pre_clause JA spaces?) {return _node("JA_pre", expr);}
 JA_post = expr:(post_clause) {return _node("JA_post", expr);}
+//         EXP-ADD: JIhOI
+JIhOI_clause = expr:(JIhOI_pre JIhOI_post) {return _node("JIhOI_clause", expr);}
+JIhOI_pre = expr:(pre_clause JIhOI spaces? selbri spaces?) {return _node("JIhOI_pre", expr);}
+JIhOI_post = expr:(TEhU_elidible post_clause) {return _node("JIhOI_post", expr);}
 // JA_no_SA_handling = pre_clause JA post_clause
 
 //         modal conversion flag
@@ -1922,6 +1926,9 @@ JA = expr:(&cmavo ( j e h i / j e / j o / j a / j u ) &post_word) {return _node(
 
 //// EXP-ADD: ja'ei, jai'e, jo'ai
 JAI = expr:(&cmavo ( j a i / j a h e i / j a i h e / j o h a i ) &post_word) {return _node("JAI", expr);}
+
+//// EXP-ADD: ji'oi
+JIhOI = expr:(&cmavo ( j i h o i ) &post_word) {return _node("JIhOI", expr);}
 
 JOhI = expr:(&cmavo ( j o h i ) &post_word) {return _node("JOhI", expr);}
 

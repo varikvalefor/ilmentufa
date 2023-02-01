@@ -341,7 +341,7 @@ gihek_1 <- NA_clause? SE_clause? (JA_clause / JOI_clause / GIhA_clause / GI_clau
 
 gihek_sa <- gihek_1 (!gihek_1 (sa_word / SA_clause !gihek_1 ) )* SA_clause &gihek
 
-jek <- NA_clause? SE_clause? JA_clause NAI_clause?
+jek <- NA_clause? SE_clause? (JA_clause / JIhOI_clause) NAI_clause?
 
 #// EXP-MODIF: A-JA-JOI merge
 joik <- NA_clause? SE_clause? (JOI_clause / JA_clause / A_clause) NAI_clause? / interval / GAhO_clause interval GAhO_clause
@@ -775,6 +775,10 @@ I_post <- post_clause
 JA_clause <- JA_pre JA_post
 JA_pre <- pre_clause JA spaces?
 JA_post <- post_clause
+#         EXP-ADD: JIhOI
+JIhOI_clause <- JIhOI_pre JIhOI_post
+JIhOI_pre <- pre_clause JIhOI spaces? selbri spaces?
+JIhOI_post <- TEhU_elidible post_clause
 # JA_no_SA_handling = pre_clause JA post_clause
 
 #         modal conversion flag
@@ -1734,6 +1738,9 @@ JA <- &cmavo ( j e h i / j e / j o / j a / j u ) &post_word
 
 #// EXP-ADD: ja'ei, jai'e, jo'ai
 JAI <- &cmavo ( j a i / j a h e i / j a i h e / j o h a i ) &post_word
+
+#// EXP-ADD: ji'oi
+JIhOI <- &cmavo ( j i h o i ) &post_word
 
 JOhI <- &cmavo ( j o h i ) &post_word
 
