@@ -1624,7 +1624,7 @@ non_lojban_word <- !lojban_word non_space+
 non_space <- !space_char .  #: JOIN
 
 #Unicode_style and escaped chars not compatible with cl_peg
-space_char <- [.\t\n\r?!\u0020]  #: JOIN
+space_char <- [.\t\n\r?!\u0020\u2026]  #: JOIN
 
 # space_char = [.?! ] / space_char1 / space_char2
 # space_char1 = '    '

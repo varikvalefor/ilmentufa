@@ -1812,7 +1812,7 @@ non_lojban_word = expr:(!lojban_word non_space+) {return _node("non_lojban_word"
 non_space = expr:(!space_char .) {return _join(expr);}
 
 //Unicode_style and escaped chars not compatible with cl_peg
-space_char = expr:([.\t\n\r?!\u0020]) {return _join(expr);}
+space_char = expr:([.\t\n\r?!\u0020\u2026]) {return _join(expr);}
 
 // space_char = [.?! ] / space_char1 / space_char2
 // space_char1 = '    '
