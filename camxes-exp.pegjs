@@ -359,7 +359,7 @@ gek_termset = expr:(gek terms_gik_terms) {return _node("gek_termset", expr);}
 
 terms_gik_terms = expr:(term (gik / terms_gik_terms) term) {return _node("terms_gik_terms", expr);}
 
-//// EXP-MODIF: "(VUhOI spaces)?" + '?' added after "relative_clauses" + Lunra's add of "(joik_ek sumti)?"
+//// EXP-MODIF: "VUhOI_elidible" + '?' added after "relative_clauses" + Lunra's add of "(joik_ek sumti)?"
 sumti = expr:(VUhOI_elidible sumti_1 (VUhO_clause free* (relative_clauses (joik_ek sumti)?)?)?) {return _node("sumti", expr);}
 
 sumti_1 = expr:(sumti_2 (joik_ek stag? KE_clause free* sumti KEhE_elidible free*)?) {return _node("sumti_1", expr);}
@@ -1793,7 +1793,7 @@ p = expr:(comma* [pP] !h !glide !p !voiced) {return _node("p", expr);}
 
 t = expr:(comma* [tT] !h !glide !t !voiced) {return _node("t", expr);}
 
-h = expr:(comma* ['h] &nucleus) {return _node("h", expr);}
+h = expr:(comma* ['h’] &nucleus) {return _node("h", expr);}
 
 //___________________________________________________________________
 
