@@ -609,7 +609,7 @@ CEhE_post <- post_clause
 
 #         EXP-ADD: CIhAU
 CIhAU_clause <- CIhAU_pre CIhAU_post
-CIhAU_pre <- pre_clause CIhAU spaces? UI_clause spaces?
+CIhAU_pre <- pre_clause CIhAU spaces?
 CIhAU_post <- post_clause
 #         tanru inversion
 CO_clause <- CO_pre CO_post

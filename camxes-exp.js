@@ -19949,7 +19949,7 @@ var camxes = (function() {
     }
 
     function peg$parseCIhAU_pre() {
-      var s0, s1, s2, s3, s4, s5, s6;
+      var s0, s1, s2, s3, s4;
 
       var key    = peg$currPos * 826 + 232,
           cached = peg$cache[key];
@@ -19970,23 +19970,8 @@ var camxes = (function() {
             s4 = peg$c2;
           }
           if (s4 !== peg$FAILED) {
-            s5 = peg$parseUI_clause();
-            if (s5 !== peg$FAILED) {
-              s6 = peg$parsespaces();
-              if (s6 === peg$FAILED) {
-                s6 = peg$c2;
-              }
-              if (s6 !== peg$FAILED) {
-                s2 = [s2, s3, s4, s5, s6];
-                s1 = s2;
-              } else {
-                peg$currPos = s1;
-                s1 = peg$c0;
-              }
-            } else {
-              peg$currPos = s1;
-              s1 = peg$c0;
-            }
+            s2 = [s2, s3, s4];
+            s1 = s2;
           } else {
             peg$currPos = s1;
             s1 = peg$c0;

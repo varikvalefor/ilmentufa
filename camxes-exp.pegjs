@@ -797,7 +797,7 @@ CEhE_post = expr:(post_clause) {return _node("CEhE_post", expr);}
 
 //         EXP-ADD: CIhAU
 CIhAU_clause = expr:(CIhAU_pre CIhAU_post) {return _node("CIhAU_clause", expr);}
-CIhAU_pre = expr:(pre_clause CIhAU spaces? UI_clause spaces?) {return _node("CIhAU_pre", expr);}
+CIhAU_pre = expr:(pre_clause CIhAU spaces?) {return _node("CIhAU_pre", expr);}
 CIhAU_post = expr:(post_clause) {return _node("CIhAU_post", expr);}
 //         tanru inversion
 CO_clause = expr:(CO_pre CO_post) {return _node("CO_clause", expr);}
